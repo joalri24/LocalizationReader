@@ -1,4 +1,4 @@
-// LocalizationReader.cpp : Defines the entry point for the console application.
+﻿// LocalizationReader.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -10,11 +10,33 @@ void printHelp();
 
 
 int main()
-{
+{	
 	printHeader();
 	Reader reader;
 	cout << "Type a command or a string key:\n";
-	string input;
+
+	// rapidxml testing -------------
+	xml_document<> doc;
+	xml_node<> * root_node;
+	ifstream xmlFile("Localization_Text.xml");
+	vector<char> buffer((istreambuf_iterator<char>(xmlFile)), istreambuf_iterator<char>());
+	buffer.push_back('\0'); // rapidxml needs the text to be zero-terminated.
+	doc.parse<0>(&buffer[0]);
+	root_node = doc.first_node();
+
+	for (xml_node<> * string_node = root_node->first_node(); string_node; string_node = string_node->next_sibling())
+	{
+		cout << "key: " << string_node->first_attribute()->value() << "\n";
+		xml_node<> * text_node = string_node->first_node("en");
+
+		if(text_node != NULL )
+			cout << text_node->value() << "\n"; // The console does not support unicode, but the text is correct.
+	}
+
+	//------------ -
+
+	// Listens to the user input
+	string input;	
 	while (true)
 	{
 		cin >> input;

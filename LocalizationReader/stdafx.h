@@ -6,12 +6,15 @@
 #pragma once
 
 #include "targetver.h"
-
+#include "rapidxml.hpp"
 #include <stdio.h>
 #include <tchar.h>
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <vector>
 
+using namespace rapidxml;
 using namespace std;
 
 
