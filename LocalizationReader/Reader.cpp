@@ -10,6 +10,7 @@ const string SPANISH = "es";
 Reader::Reader()
 {
 	currentLanguage = ENGLISH;
+	cout << "Current language: " << "English\n";
 }
 
 /*
@@ -28,12 +29,12 @@ void Reader::setLanguage(string languageIn)
 	if (languageIn == ENGLISH)
 	{
 		currentLanguage = ENGLISH;
-		cout << "Language changed to " << "English";
+		cout << "Language set to " << "English";
 	}	
 	else if (languageIn == SPANISH)
 	{
 		currentLanguage = SPANISH;
-		cout << "Language changed to " << "Spanish";
+		cout << "Language set to " << "Spanish";
 	}		
 	else
 	{
