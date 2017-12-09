@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	en = english 
+    es = spanish 
+-->
+<strings_localization>
+
+	<string key="stars_1">
+		<en>Stars.</en>
+		<es>Estrellas.</es>	
+	</string>
+	
+	<string key="stars_2">
+		<en>The hole in the cloud was no bigger than my [REDACTED], and only a dozen or so stars twinkled softly in the night.</en>
+		<es>El hueco en las nubes no era más grande que mi [REDACTADO], y tan solo cerca de una docena de estrellas tintilaban suavemente en la noche.</es>
+	</string>
+	
+	<string key="stars_3">
+		<en>Only a fool would demand power of the stars.</en>
+		<es>Solo un idiota demandaría poder a las estrellas.</es>
+	</string>
+	
+</strings_localization>
