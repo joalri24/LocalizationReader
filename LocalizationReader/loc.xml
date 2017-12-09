@@ -5,17 +5,17 @@
 -->
 <strings_localization>
 
-	<string key="prologe_1">
+	<string key="prologue_1">
 		<en>Once upon a time, in the magical land of [REDACTED]…</en>
 		<es>Érase una vez, en la mágica tierra de [REDACTADO]…</es>	
 	</string>
 	
-	<string key="prologe_2">
+	<string key="prologue_2">
 		<en>…there came an era when the ideals of friendship gave way to greed, selfishness, paranoia and a jealous reaping of dwindling space and natural resources.</en>
 		<es>…llego una era en la cual los ideales de la amistad se hicieron a un lado, dando paso a la codicia, al egoísmo, a la paranoia y a una celosa disputa sobre espacio recursos naturales, cada vez más escasos.</es>
 	</string>
 	
-	<string key="prologe_3">
+	<string key="prologue_3">
 		<en>Lands took up arms against their neighbors. The end of the world occurred much as we had predicted -- the world was plunged into an abyss of balefire and dark magic.</en>
 		<es>Países se alzaron en armas contra sus vecinos. El fin del mundo ocurrió tal cómo se había predicho -- el mundo cayó en un abismo de fuego y magia oscura.  </es>
 	</string>
