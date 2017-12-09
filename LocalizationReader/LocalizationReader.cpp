@@ -9,8 +9,12 @@ void printHeader();
 void printHelp();
 
 // constants
+const string ENGLISH = "en";
+const string SPANISH = "es";
 const string HELP_COMMAND = "help";
 const string EXIT_COMMAND = "exit";
+const string CHANGE_TO_ES_COMMAND = "change to es";
+const string CHANGE_TO_EN_COMMAND = "change to en";
 
 int main()
 {	
@@ -23,42 +27,23 @@ int main()
 	bool validFile = false;
 	do
 	{
-		cin >> input;
+		getline(cin, input);
 		if (!reader.setCurrentDocument(input))
 			cout << "Invalid file. Try again.\n";
 		else
 			validFile = true;
 	} while (validFile != true);
+	cout << "File opened succesfully!\n";
 
 	// print some instructions
 	cout << "Type '" << HELP_COMMAND << "' for help.\n";
 	cout << "Type a command or a string key:\n";
 
-	// rapidxml testing -------------
-	/*xml_document<> doc;
-	xml_node<> * root_node;
-	ifstream xmlFile("loc.xml");
-	vector<char> buffer((istreambuf_iterator<char>(xmlFile)), istreambuf_iterator<char>());
-	buffer.push_back('\0'); // rapidxml needs the text to be zero-terminated.
-	doc.parse<0>(&buffer[0]);
-	root_node = doc.first_node();
-
-	for (xml_node<> * string_node = root_node->first_node(); string_node; string_node = string_node->next_sibling())
-	{
-		cout << "key: " << string_node->first_attribute()->value() << "\n";
-		xml_node<> * text_node = string_node->first_node("en");
-
-		if(text_node != NULL )
-			cout << text_node->value() << "\n"; // The console does not support unicode, but the text is correct.
-	}*/
-	
-	//------------ -
-
 	// Listen to the user's input
 	string answer;
 	while (true)
 	{
-		cin >> input;
+		getline(cin, input);
 
 		if (input == EXIT_COMMAND)
 			break;
@@ -69,6 +54,17 @@ int main()
 			continue;
 		}
 
+		if (input == CHANGE_TO_EN_COMMAND)
+		{
+			reader.setLanguage(ENGLISH);
+			continue;
+		}
+
+		if (input == CHANGE_TO_ES_COMMAND)
+		{
+			reader.setLanguage(SPANISH);
+			continue;
+		}
 		cout << reader.getString(input);
 		
 			

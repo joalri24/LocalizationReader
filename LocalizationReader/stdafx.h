@@ -13,6 +13,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <sstream>
 
 using namespace rapidxml;
 using namespace std;

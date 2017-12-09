@@ -29,16 +29,16 @@ void Reader::setLanguage(string languageIn)
 	if (languageIn == ENGLISH)
 	{
 		currentLanguage = ENGLISH;
-		cout << "Language set to " << "English";
+		cout << "Language set to " << "English\n";
 	}	
 	else if (languageIn == SPANISH)
 	{
 		currentLanguage = SPANISH;
-		cout << "Language set to " << "Spanish";
+		cout << "Language set to " << "Spanish\n";
 	}		
 	else
 	{
-		cout << "Invalid name. The expected values are: \nen (for english)\nes(for spanish)";
+		cout << "Invalid name. The expected values are: \nen (for english)\nes(for spanish)\n";
 	}
 }
 
